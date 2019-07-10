@@ -50,12 +50,12 @@ def get_customers(num_customers, get_all_customer_details=True):
             url += detail + ',' if inc else ''
         url = url.strip(',')
     try:
-        print(url)
         r = requests.get(url)
-        print(r)
         results = json.loads(r.text)["results"]
     except:
         print("Results cannot be retrieved from randomuser.me")
+        print(url)
+        print(r)
         results = ''
     return results
 
