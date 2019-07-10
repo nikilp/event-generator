@@ -81,7 +81,7 @@ if __name__ == "__main__":
 
         shopper = {}
         shopper["id"] = result["id"]["value"]
-        shopper["name"] = result["name"]["first"].capitalize(), result["name"]["last"].capitalize()
+        shopper["name"] = result["name"]["first"].capitalize() + ' ' + result["name"]["last"].capitalize()
         shopper["city"] = result["location"]["city"].capitalize()
 
         product = {}
